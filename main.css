@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body{
+  font-family: 'Comic Neue', cursive;
+}
+
 :root{
 
 	--artpink : #ff3175;
 	--darkpurple:#413045;
 }
+
+
 
 
 .site-navbar{
@@ -14,9 +22,13 @@
 }
 
 .navtext{
-	color: var(--darkpurple);
-	font-size: 1em;
+
+	font-size: 1.25em;
 	color: white;
+}
+
+.navtext:hover{
+  color: inherit;
 }
 
 .section-title-text{
@@ -54,9 +66,157 @@
 .see-more{
 	text-decoration: none;
 	font-size: 1.25em;
-	color:black;
+  color:black;
+  
+}
+
+.see-more:hover{
+  color: var(--artpink);
 }
 
 
+.hoveranime1 a {
+ 
+
+  position: relative;
+}
+
+.hoveranime1 a:before,
+.hoveranime1 a:after {
+
+  transition: all 0.35s ease;
+  height: 2px;
+  width: 35%;
+  background-color: #413045;
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+.hoveranime1 a:before {
+  top: 0;
+  left: 0;
+}
+.hoveranime1 a:after {
+  bottom: 0;
+  right: 0;
+}
+.hoveranime1 a:hover:before,
+.hoveranime1 a.hover:before,
+.hoveranime1 a:hover:after,
+.hoveranime1 a.hover:after {
+  opacity: 1;
+}
+.hoveranime1 a:hover:before,
+.hoveranime1 a.hover:before {
+  left: 65%;
+}
+.hoveranime1 a:hover:after,
+.hoveranime1 a.hover:after {
+  right: 65%;
+}
 
 
+.cardImgHover {
+  position: relative;
+  overflow: hidden;
+ 
+  max-width: 315px;
+ 
+
+  background: linear-gradient(90deg, #700877 0%,var(--artpink) 100%);
+}
+
+.cardImgHover img,
+.cardImgHover:before,
+.cardImgHover:after {
+
+  transition: all 0.4s ease;
+}
+
+.cardImgHover img {
+  max-width: 100%;
+
+  vertical-align: top;
+}
+
+.cardImgHover:before,
+.cardImgHover:after {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  
+  transform: translate(-50%, -50%);
+}
+
+.cardImgHover:before {
+  width: 60px;
+  height: 1px;
+  left: 100%;
+}
+
+.cardImgHover:after {
+  height: 60px;
+  width: 1px;
+  top: 0%;
+}
+
+.cardImgHover a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.cardImgHover:hover img,
+.cardImgHover.hover img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.cardImgHover:hover:before,
+.cardImgHover.hover:before,
+.cardImgHover:hover:after,
+.cardImgHover.hover:after {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+}
+
+
+.circleZoom img{
+  transition: all 0.3s ease-in-out;
+}
+
+.circleZoom img:hover{
+  transform: scale(1.2);
+}
+
+.waShake img:hover{
+/* Start the shake animation and make the animation last for 0.5 seconds */
+animation: shake 0.5s;
+
+/* When the animation is finished, start again */
+animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
