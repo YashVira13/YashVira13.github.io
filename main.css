@@ -119,7 +119,7 @@ body{
 .cardImgHover {
   position: relative;
   overflow: hidden;
- 
+ border-radius: 5px;
 
  
 
